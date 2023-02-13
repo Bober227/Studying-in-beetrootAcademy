@@ -1,0 +1,48 @@
+/*My skills*/
+.my_skills{
+    display: flex;
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 40px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    border: solid rgb(255, 213, 0) 3px;
+}
+.personal {
+    font-style: italic;
+    max-width: 800px;
+    text-align: center;
+    font-size: 30px;
+}
+.photo{
+    margin-top: 5px;
+    margin-left: 115px;
+    border: solid rgb(255, 213, 0) 50px;
+}
+
+/* Work experience*/
+.midle{
+ font-size:25px;
+ display: flex;
+}
+.work_ex{
+    padding: 20px;
+    border: solid rgb(255, 213, 0) 3px;
+    width: 850px;
+}
+.vacation{
+    text-align: center;
+}
+h2{
+    margin: 0;
+    text-align: center;
+}
+.age{
+    font-style: italic;
+    padding-left: 10px ;
+    border: solid rgb(255, 213, 0) 3px;
+    width: 545px;
+}
