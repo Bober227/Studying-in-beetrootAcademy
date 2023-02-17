@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Form</title>
+</head>
+<body>
+<div class="form">
+    <form method="get" action="bober.com">
+        <h1>Регистрація</h1>
+        <hr>
+        <p>Заповніть, будь ласка, форму для регистрації</p>
+
+        <label><b>Повне ім'я</b>
+        <input class="position" type="text" placeholder="Введіть своє ім'я" name="name" required>
+        </label>
+
+        <label><b>Email</b>
+        <input class="position" type="text" placeholder="Введіть Email" name="email" required>
+        </label>
+
+        <label><b>Пароль</b>
+        <input class="position" type="password" placeholder="Введіть пароль" name="psw" required>
+        </label>
+
+        <label><b>Пітвердження пароля</b>
+        <input class="position" type="password" placeholder="Повторіть пароль" name="rp-psw">
+        </label>
+
+        <label><b>Вік</b>
+            <input class="position" type="text" placeholder="Ваш вік" name="age" required>
+            </label>
+        
+        <label><b>Стать</b>
+        <input type="radio" name="gender" value="male">Чоловік
+        <input type="radio" name="gender" value="female">Жінка
+        </label>
+
+        <label><b>Курс</b>
+        <select name="course">
+            <option value="1">Front-End</option>
+            <option value="2">Back-End</option>
+            <option value="3">Project Management</option>
+            <option value="4">QA Manual</option>
+        </select>
+        </label>
+
+        <label><b>Повна адреса проживання</b>
+        <textarea placeholder="Введіть свою адресу проживання" name="adress" cols="30" rows="10"></textarea>
+        </label>
+
+        <label>
+           <p><input type="checkbox">Я погоджуюсь с умовами <a href="#">конфеденційності</a></p>
+        </label>
+
+       
+        <button class="registerbtn" type="submit">Зареєструватись</button>
+        <button class="registerbtn" type="reset">Очистити</button>
+       
+    </form>
+</div>
+</body>
+</html>
