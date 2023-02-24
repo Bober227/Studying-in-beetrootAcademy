@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+/* All header */
+header{
+    margin-top: 27.5px;
+    text-align: center;
+}
+hr{
+    margin-top: 27.5px;
+    margin-bottom: 0;
+    border: 1px solid #828282;
+}
+
+a{
+    margin-left: 40px;
+    text-decoration: none;
+    color: #828282;
+}
+a:hover{
+    color: black;
+    text-decoration:underline;
+}
+
+/* First screen*/ 
+h1{
+    font-size: 48px;
+    margin: 0;
+    padding-top: 12px;
+}
+.denis{
+    margin-top: 50px;
+    width: 100%;
+}
+
+/* About me*/ 
+.color-me{
+    height: 440px;
+    text-align: center;
+    background-color: #F6F6F6;
+}
+h2{
+    font-size: 34px;
+    margin: 0;
+}
+.about-me{
+    font-size: 18px;
+    max-width: 480px;
+    height: 210px;
+    width: 100%;
+    padding-top: 100px;
+    margin: 0px 240px 100px;
+}
+
+/* Skills */
+
+.text-skill{
+   text-align: center;
+   margin-top: 100px;
+}
+.icons{
+    display: flex;
+    gap: 187px;
+    margin-top: 50px;
+    margin-left: 47px;
+}
+.icon-text{
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    margin-top: 25px;
+    margin-left: 47px;
+    margin-right: 67.5px;
+    gap: 190.5px;
+    font-size: 14px;
+    color: #828282;
+}
+.icon-stars{
+    display: flex;
+    gap: 97px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+/* Skills */
+
+.color-portfolio{
+    font-size: 18px;
+    text-align: center;
+    padding-top: 100px;
+    background-color: #F6F6F6;
+    height: 2268px;
+}
+.img {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; 
+    gap: 70px;
+}
+.img1, .img2, .img3 {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+/* Contacts */
+.contacts{
+    margin-top: 100px ;
+    text-align: center;
+}
+.button-s{
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+button{
+    width: 180px;
+    height: 44px;
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 25px;
+    user-select: none;
+    line-height: 1.5;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    font-size: 18px;
+    font-weight: 700;
+    }
+button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+.like{
+    width: 200px;
+    font-size: 14px;
+    color: #828282;
+    padding-left: 380px;
+    margin-bottom: 100px;
+    margin-top: 60px;
+}
