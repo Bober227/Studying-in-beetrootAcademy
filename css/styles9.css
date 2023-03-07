@@ -1,0 +1,132 @@
+body {
+    color: #FFFFFF;
+    background-color: #3B3F45;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    text-align: center;
+    color: #FF8984;
+    background-color: #4A4F56;
+    height: 82px;
+}
+
+h1 {
+    font-weight: 700;
+    padding-top: 19px;
+    padding-bottom: 4px;
+    font-size: 24px;
+}
+
+main {
+    background-color: #3B3F45;
+}
+
+.forma {
+    margin-top: 20px;
+    max-width: 534px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 270px;
+}
+
+li {
+    justify-content: center;
+    height: 45px;
+    background-color: #88839E;
+}
+
+li:nth-last-child(even) {
+    background-color: #7A7593;
+}
+
+li:hover {
+    background-color: #625E77;
+    border-top: solid 3px;
+    border-bottom: solid 3px;
+}
+
+li:active {
+    background-color: #FF8984;
+}
+
+span {
+    vertical-align: middle;
+    font-size: 11px;
+}
+
+input {
+    vertical-align: middle;
+    margin-left: 12px;
+    margin-top: 12px;
+    margin-bottom: 14px;
+    margin-right: 16px;
+    width: 19px;
+    height: 19px;
+}
+
+* {
+    transition: all .1s ease-in;
+}
+
+.btn {
+    margin-top: 45px;
+    border: none;
+    color: #FF8984;
+    width: 534px;
+    height: 45px;
+    background-color: #4A4F56;
+}
+
+.btn-center {
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.checkbox {
+    display: none;
+}
+
+.fake {
+    margin: 12px 16px 14px 12px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: relative;
+}
+
+.fake:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/Checklist.svg');
+    opacity: 0;
+}
+
+.checkbox:checked+.fake:before {
+    opacity: 1;
+}
+
+input[type="checkbox"]:checked+.fake:before {
+    opacity: 1;
+}
+
+input[type="checkbox"]:checked + .fake + label {
+    text-decoration: line-through;
+    color: #9B96AC;
+    display: inline-flex;
+    align-items: center;
+}
+label > span{
+    padding-left: 5px;
+}
