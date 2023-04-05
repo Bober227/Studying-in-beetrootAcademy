@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Farro';
+    src: url('farro-light-webfont.woff2') format('woff2'),
+         url('farro-light-webfont.woff') format('woff'),
+         url('farro-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Francois One';
+    src: url('francoisone-regular-webfont.woff2') format('woff2'),
+         url('francoisone-regular-webfont.woff') format('woff'),
+         url('francoisone-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Hind';
+    src: url('hind-regular-webfont.woff2') format('woff2'),
+         url('hind-regular-webfont.woff') format('woff'),
+         url('hind-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PT Sans italic';
+    src: url('ptsans-italic-webfont.woff2') format('woff2'),
+         url('ptsans-italic-webfont.woff') format('woff'),
+         url('ptsans-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('ptsans-regular-webfont.woff2') format('woff2'),
+         url('ptsans-regular-webfont.woff') format('woff'),
+         url('ptsans-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Staatliches';
+    src: url('staatliches-regular-webfont.woff2') format('woff2'),
+         url('staatliches-regular-webfont.woff') format('woff'),
+         url('staatliches-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Tourney';
+    src: url('tourney-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
