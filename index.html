@@ -5,36 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/styles9.css">
-    <title>Fonts</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Documentation</title>
 </head>
 
 <body>
     <header>
-        <div class="wrapper">
-            <div class="navigation">
-                <p>ENG</p>
-                <nav>
-                    <a href="#">Documentation</a>
-                    <span>/</span>
-                    <a href="#">Who's using</a>
-                </nav>
-                <img class="logo" src="images/company-logo-black.svg" alt="Logo">
-            </div>
+        <div class="navigation">
+            <p>ENG</p>
+            <nav>
+                <a href="#">Documentation</a>
+                <span>/</span>
+                <a href="who's using.html">Who's using</a>
+            </nav>
+            <img class="logo" src="images/company-logo-black.svg" alt="Logo">
         </div>
-
     </header>
-    <main>
+    <main class="background-image">
+        <aside class="begin">
+            <ul>
+                <li><a href="#introduction">Introduction</a>
+                    <hr>
+                </li>
+                <li><a href="#core">Core components</a>
+                    <hr>
+                </li>
+                <li><a href="#react">React fundamentals</a>
+                    <hr>
+                </li>
+                <li><a href="#handling">Handling text input</a>
+                    <hr>
+                </li>
+
+            </ul>
+        </aside>
+        <a name="introduction"></a>
         <div class="wrapper">
             <div class="introduction">
+                <hr class="line">
                 <h2 class="begin">Introduction <span class="chapter">Chapter 1</span></h2>
                 <p class="text">Welcome to the very start of your React Native journey! If you're looking for
                     environment setup instructions,
                     they've moved to <span class="underline">their own section</span>. Continue reading for an
                     introduction to the documentation,
                     Native Components, React, and more!</p>
+                <a name="core"></a>
             </div>
+            <hr class="line">
             <div class="core">
                 <h2 class="begin">Core components <span class="chapter">Chapter 2</span></h2>
                 <p class="text">React Native is an open source framework for building Android and iOS applications using
@@ -45,7 +63,9 @@
                     <span class="sans-italic"> bundles of reusable, nestable code.</span> You can learn more about React
                     in the next section. But first, let’s cover how components work in React Native.
                 </p>
+                <a name="react"></a>
             </div>
+            <hr class="line">
             <div class="react">
                 <h2 class="begin">React fundamentals <span class="chapter">Chapter 3</span></h2>
                 <p class="text">React Native runs on <span class="underline">React</span>, a popular open source library
@@ -76,7 +96,9 @@
                     how components render, state is like a component’s personal data storage.
                     State is useful for handling data that changes over time or that comes from user interaction.
                     State gives your components memory!</p>
+                <a name="handling"></a>
             </div>
+            <hr class="line">
             <div class="handling">
                 <h2 class="begin">Handling text input <span class="chapter">Chapter 4</span></h2>
                 <p class="text">TextInput is a Core Component that allows the user to enter text.
