@@ -1,0 +1,818 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@300;400;700&display=swap');
+@import "./reset";
+@import "./variables.scss";
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./mixin.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  transition: all .1s ease-in;
+}
+
+.wrapper {
+  padding-left: 300px;
+  padding-right: 300px;
+  max-width: 1920px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: $colorwhite;
+}
+
+// Header
+
+.bagimg-head {
+  @include bg-image(url(../images/background-images/HeaderBackground.jpg));
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    @include Josefin(48px, 700, $colorwhite);
+    line-height: $line-height52;
+    margin-top: 295px;
+    margin-bottom: 8px;
+  }
+
+  &__content {
+    @include Josefin(22px, 400, $colorwhite);
+    margin-bottom: 48px;
+    letter-spacing: 0.31rem;
+    line-height: $line-height28;
+  }
+
+  &__scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 124px;
+    gap: 8px;
+    @include Aleo(14px, 400);
+    letter-spacing: 0.2rem;
+    line-height: $line-height20;
+
+  }
+
+  &__button {
+    margin-bottom: 211px;
+    max-width: 647px;
+    width: 100%;
+
+    // Search button
+
+    &__example {
+      position: relative;
+      width: 100%;
+
+      input {
+        width: 100%
+      }
+
+      input[type=text] {
+        @include Josefin(14px, 400, $colorblack);
+        letter-spacing: 0.2rem;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: none;
+        float: left;
+        padding-left: 36px;
+        line-height: $line-height20;
+      }
+
+      input::placeholder {
+        color: $textgrey;
+        text-overflow: clip;
+      }
+
+      // Submit button
+
+      button {
+        @include Aleo(14px, 400);
+        color: $colorwhite;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.1rem;
+        line-height: $line-height20;
+        padding: 16px 24px;
+        border: 4px solid $colorwhite;
+        border-left: none;
+        background: $colorblue;
+        cursor: pointer;
+      }
+
+      button svg {
+        margin-right: 12px;
+      }
+
+      button:hover {
+        background: #0b7dda;
+      }
+    }
+
+    // Clear floats
+    &__example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+}
+
+// Navigation
+.bagimg-top-nav {
+  background-color: $colorblue;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &__logo {
+    @include Josefin(24px, 400, $colorwhite);
+    letter-spacing: 0.1rem;
+    line-height: $line-height28;
+  }
+
+}
+
+// Burger menu
+.menu {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+
+  li {
+    a:hover {
+      opacity: 0.7;
+      text-decoration: underline;
+    }
+
+    a:focus {
+      color: black;
+    }
+  }
+}
+
+.menu>li {
+  @include Aleo(14px, 400);
+  line-height: 20px;
+  letter-spacing: 0.1rem;
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  max-width: 30px;
+  width: 100%;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  margin-right: 10px;
+  display: block;
+  background-color: white;
+  position: absolute;
+  height: 2px;
+  width: 34px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -12px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 12px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+
+
+// Main block1
+
+.bagimg {
+  @include bg-image(url(../images/background-images/secondbg.jpg));
+}
+
+.block1 {
+  display: flex;
+
+  &__text {
+    margin-right: 136px;
+    margin-top: 190px;
+    margin-bottom: 190px;
+
+    &__why-us {
+      @include Aleo(36px, 400);
+      padding-bottom: 24px;
+      line-height: $line-height40;
+
+    }
+
+    &__content {
+      @include Josefin(16px, 300, $colorwhite);
+      line-height: 28px;
+      padding-bottom: 32px;
+      letter-spacing: 0.1rem;
+      line-height: $line-height28;
+    }
+
+    &__button .btn {
+      @include Aleo(16px, 400);
+      @include button;
+      letter-spacing: 0.07rem;
+      color: $colorwhite;
+      padding-left: 32px;
+      padding-right: 32px;
+
+      &:hover {
+        color: $colorblue;
+        background: $colorwhite;
+      }
+
+      &:focus {
+        box-shadow: 0px 0px 20px 0px rgb(98, 98, 239);
+      }
+    }
+  }
+
+  &__images {
+    margin-top: 124px;
+    margin-right: 112px;
+    margin-bottom: 124px;
+
+    &__img-2 {
+      padding-left: 74px;
+      padding-top: 16px;
+    }
+  }
+}
+
+// Main block 1 footer
+
+.bagimg-searchplaces {
+  background-color: $darkgrey;
+}
+
+.block1-footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &__icon {
+    position: relative;
+    @include Aleo(36px, 400);
+    line-height: $line-height40;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 424px;
+    width: 100%;
+  }
+
+  &__icon svg {
+    background-color: $darkgrey;
+    padding-bottom: 20px;
+  }
+}
+
+// Main block 2 
+.bagimg-block2 {
+  @include bg-image(url(../images/background-images/thirdbg.jpg));
+}
+
+.block2 {
+  padding-top: 220px;
+  padding-bottom: 120px;
+
+  &__text {
+    background-color: rgba(35, 35, 35, 0.9);
+    max-width: 648px;
+    width: 100%;
+    padding: 44px 32px;
+
+    &__content1 {
+      @include Josefin(20px, 300, $colorwhite);
+      letter-spacing: 0.1rem;
+      line-height: $line-height28;
+    }
+
+    &__h {
+      @include Josefin(20px, 400, $colorwhite);
+      padding-top: 16px;
+      padding-bottom: 16px;
+      line-height: $line-height28;
+    }
+
+    &__content2 {
+      @include Josefin(16px, 300, $colorwhite);
+      letter-spacing: 0.1rem;
+      line-height: $line-height28;
+      padding-bottom: 24px
+    }
+
+    &__button .btn {
+      @include button;
+      @include Aleo(16px, 400);
+      color: $colorwhite;
+      letter-spacing: 0.06rem;
+      padding-right: 57px;
+      padding-left: 56px;
+
+      &:hover {
+        color: $colorblue;
+        background: $colorwhite;
+      }
+
+      &:focus {
+        box-shadow: 0px 0px 20px 0px rgb(98, 98, 239);
+      }
+    }
+  }
+}
+
+// Main block 3
+.bagimg-block3 {
+  @include bg-image(url(../images/background-images/fourhtbg.jpg));
+}
+
+.block3 {
+  padding-top: 220px;
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: flex-end;
+
+  &__text {
+    background-color: rgba(35, 35, 35, 0.9);
+    max-width: 648px;
+    width: 100%;
+    padding: 44px 32px;
+
+    &__content1 {
+      @include Josefin(20px, 300, $colorwhite);
+      letter-spacing: 0.1rem;
+      line-height: $line-height28;
+    }
+
+    &__h {
+      @include Josefin(20px, 400, $colorwhite);
+      padding-top: 16px;
+      padding-bottom: 16px;
+      line-height: $line-height28;
+    }
+
+    &__content2 {
+      @include Josefin(16px, 300, $colorwhite);
+      letter-spacing: 0.1rem;
+      line-height: 28px;
+      padding-bottom: 24px;
+      line-height: $line-height28;
+    }
+
+    &__button .btn {
+      @include button;
+      @include Aleo(16px, 400);
+      color: $colorwhite;
+      letter-spacing: 0.06rem;
+      padding-right: 57px;
+      padding-left: 56px;
+
+      &:hover {
+        color: $colorblue;
+        background: $colorwhite;
+      }
+
+      &:focus {
+        box-shadow: 0px 0px 20px 0px rgb(98, 98, 239);
+      }
+    }
+  }
+}
+
+// Main block 4
+.bagimg-block4 {
+  @include bg-image(url(../images/background-images/fifthbg.jpg));
+}
+
+.block4 {
+
+  padding-top: 120px;
+  padding-bottom: 180px;
+
+  &__h {
+    @include Aleo(36px, 400);
+    line-height: $line-height40;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+
+  &__main {
+    display: flex;
+
+    &__img img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__text {
+      background-color: $darkgrey;
+      padding: 48px 65px 48px 60px;
+      flex: 1;
+
+      &__h {
+        @include Josefin(20px, 400, $colorwhite);
+        line-height: $line-height28;
+        padding-bottom: 14px
+      }
+
+      &__content {
+        @include Josefin(16px, 300, $colorwhite);
+        line-height: $line-height28;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+}
+
+// Footer
+
+.foot {
+  text-align: center;
+  background-color: $colorblack;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__h {
+    @include Josefin(24px, 700, $colorwhite);
+    line-height: 28px;
+    letter-spacing: 0.1rem;
+  }
+
+  &__content {
+    @include Josefin(14px, 400, $colorwhite);
+    line-height: 20px;
+    letter-spacing: 0.2rem;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+
+  &__icons a:not(:last-of-type) {
+    margin-right: 32px;
+  }
+
+  &__icons a:hover {
+    svg {
+      path {
+        fill: $colorblue;
+      }
+    }
+  }
+
+}
+
+// Responsive
+
+
+
+// Width 1556 px
+
+@media (max-width: 1556px) and (min-width: 1360px) {
+  .block1 {
+    &__text {
+      margin-top: 124px;
+      margin-right: 50px;
+      margin-bottom: 124px;
+    }
+
+    &__images {
+      margin-top: 124px;
+      margin-right: 0px;
+      margin-bottom: 124px;
+    }
+
+  }
+}
+
+// Width 1360px
+
+@media (max-width: 1360px) {
+  .wrapper {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+
+
+  .block1 {
+    &__images {
+      margin-top: 124px;
+      margin-bottom: 124px;
+      margin-right: 0;
+
+      &__img-2 {
+        padding-left: 110px;
+        padding-top: 16px;
+      }
+    }
+
+    &__text {
+      margin-right: 122px;
+      margin-top: 190px;
+      margin-bottom: 190px;
+    }
+  }
+
+  .block2 {
+    &__text {
+      background-color: rgba(35, 35, 35, 0.9);
+      max-width: 558px;
+      width: 100%;
+      padding: 44px 32px;
+    }
+  }
+
+  .block3 {
+    &__text {
+      background-color: rgba(35, 35, 35, 0.9);
+      max-width: 558px;
+      width: 100%;
+      padding: 44px 32px;
+    }
+  }
+
+}
+
+// Width 1024px
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+
+
+  .block1 {
+    &__images {
+      margin-top: 124px;
+      margin-right: 1px;
+      margin-bottom: 124px;
+
+      &__img-2 {
+        padding-left: 36px;
+        padding-top: 16px;
+      }
+    }
+
+    &__text {
+      margin-right: 24px;
+      margin-top: 190px;
+      margin-bottom: 190px;
+    }
+  }
+}
+
+// Width 786 px
+
+@media (max-width: 786px) {
+  .top-nav {
+    background-color: $colorblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+// Width 768px
+@media (max-width: 768px) {
+  .wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .block1 {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    &__text {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin-right: 0px;
+      margin-top: 0px;
+      margin-bottom: 60px;
+    }
+
+    &__images {
+      display: flex;
+      margin-top: 124px;
+      margin-right: 0px;
+      margin-bottom: 32px;
+
+      &__img-1 {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+
+      &__img-2 {
+        padding-left: 24px;
+        padding-top: 0px;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .block1-footer {
+    background-image: none;
+    background-color: $darkgrey;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .block2 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &__text {
+      background-color: rgba(35, 35, 35, 0.9);
+      max-width: 720px;
+      width: 100%;
+      padding: 44px 32px;
+    }
+  }
+
+  .block3 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &__text {
+      background-color: rgba(35, 35, 35, 0.9);
+      max-width: 720px;
+      width: 100%;
+      padding: 44px 32px;
+    }
+  }
+
+  .block4 {
+    &__main {
+      display: flex;
+      flex-direction: column;
+
+      &__img img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+
+      &__text {
+        padding: 48px 60px 48px 60px;
+      }
+    }
+
+  }
+}
+
+// Width 645 px for burger
+
+@media (max-width: 645px) {
+  .top-nav {
+    flex-direction: row;
+
+    &__logo {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 50px;
+    }
+  }
+
+  .menu-button-container {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    top: 91px;
+    flex-direction: column;
+    width: 100%;
+    background-color: $colorblue;
+  }
+
+  #menu-toggle~.menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #menu-toggle:checked~.menu li {
+    height: 3.5em;
+    padding: 1em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .menu>li {
+
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: $colorblue;
+    align-items: center;
+  }
+
+  .menu>li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+// Width 576px
+
+@media (max-width: 576px) {
+  .wrapper {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .head {
+    &__button {
+      margin-bottom: 211px;
+      max-width: 540px;
+      width: 100%;
+    }
+  }
+}
