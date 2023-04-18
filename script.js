@@ -1,42 +1,68 @@
-// Minimum 
-// 2.
-// Correct
-let user_name;
-let test123;
-let $;
-let _;
+// const suma = 0.1 + 0.2; 
+// alert (suma.toFixed(1));
 
-/* Wrong
-let 1a; 
-let test-t; 
-let let; 
-let return; 
-let function; */
+// const number = ("1");
+// const suma_2 = Number(number) + 2; 
+// alert (suma_2);
 
-// Norma
-const userName = prompt(`What is your name?`);
-alert (`Hello ${userName}`);
+// let size_of_flash = prompt("Введіть розмір флешки в гб:");
+// size_of_flash = size_of_flash * 1000; 
+// const amount_of_files = size_of_flash / 820; 
+// alert(`Кількість файлів розміром 820мб що поміститься на флешку: ${amount_of_files.toFixed()}`);
 
-const today_year = 2023; 
-const year_of_birth = prompt(`Enter the year of your birth:`);
-const your_year = today_year - year_of_birth;
-alert (`You ${your_year} years old`);
+// const suma_money = prompt("Введіть суму грошей в гаманці:");
+// const chockolate = prompt("Введіть ціну шоколадки:");
+// let number_of_chockolate = Math.floor(suma_money / chockolate);
+// let reshta =  suma_money - number_of_chockolate * chockolate;
+// alert (`Ви можете купити ${number_of_chockolate} шоколадок і ваша решта становить ${reshta.toFixed(2)}`);
 
-const length_side_of_square = prompt(`The length of the side of the square:`);
-const perimetr = length_side_of_square * 4; 
-alert (`The perimeter of the square:${perimetr}`)
 
-// Maximum
-const radius = prompt(`Write the radius of a circle:`);
-const circle_area = 3.14 * radius ** 2; 
-alert (`The area of a circle: ${circle_area}`);
+// const number = prompt("Введіть тризначне:");
+// const reversedNumber = number.split("").reverse().join("");
+// alert(`Введене число ${number} обернене ${reversedNumber}.`);
 
-const distance = prompt("What is the distance in kilometers between the two cities?");
-const time = prompt("How many hours do you want to take to reach your destination?");
-const speed = distance / time;
-alert(`You need to move at a speed of ${speed} km/hour to reach on time.`);
+// const deposit = parseFloat(prompt("Введіть суму депозиту:"));
+// const monthlyRate = 0.05 / 12;
+// const twoMonthRate = monthlyRate * 2;
+// const interestAccrued = deposit * twoMonthRate;
+// alert(`Відсотки нараховані на депозит в розмірі ${deposit} за 2 місяці при річній ставці 5% становить ${interestAccrued.toFixed(2)}.`);
 
-const dollars = prompt("Enter the amount in dollars:");
-const exchange_rate = 0.92;
-const euros = dollars * exchange_rate;
-alert(`${dollars} dollars is equivalent to ${euros.toFixed(2)} euros.`);
+// let arr = ["1", "2", "3", 4, ["some", "okay"], 5];
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log( arr[i] ); 
+//     if(Array.isArray(element)){
+//         for (let j = 0; i < element.length, j++){
+//             console.log()
+//         }
+//     }
+// }
+
+// let count = Number(prompt("Введіть число:")) 
+// while (count > 0 ){
+//     console.log(count);
+//     count-- ;
+// }
+
+// let number = prompt("Введіть кількість овець:"); 
+//  if (number < 0 ) {
+//     console.log("Ви ввели від'ємне число")
+//  }
+//  else {
+//     let sheep = "";
+//     for (let i = 1; i <= number; i++) {
+//         sheep += i + " вівця...";
+//       }
+//       console.log(sheep);
+//     }
+ 
+let number = prompt("Введіть число");
+
+for (let i = number; i > 0; i--){
+    console.log(i);
+}
+
+
+
+
+
