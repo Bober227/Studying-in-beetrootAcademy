@@ -1,337 +1,116 @@
-@charset "UTF-8";
+@import "./reset";
+@import "./variables.scss";
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./mixin.scss";
 
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  background: #E5E5E5;
-  color: red($color: #c62e2e);
-}
-
-.popup::backdrop {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-a {
-  text-decoration: none;
-}
-
-.text-color {
-  color: #545454;
-}
-
-a:hover {
-  opacity: 0.6;
-}
-
-.popup {
-  background-color: white;
-  border-radius: 6px;
-  width: 570px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.forma {
+* {
   box-sizing: border-box;
-  margin-left: 34px;
-  margin-right: 34px;
-  width: 500px;
-  margin-top: 35px;
-  margin-bottom: 16px;
 }
 
-.forma h2 {
-  font-weight: 500;
-  color: #1C1C1C;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
 
-input:focus {
-  border: 1px solid #007BFF;
-}
-
-/* First-name */
-
-.first-lastname {
-  display: flex;
-  color: #545454;
-}
-
-.first-name-div {
-  margin-right: 12px;
-}
-
-.firstname-lastinput {
-  margin-top: 7px;
-  box-sizing: border-box;
-  font-size: 15px;
-  border-radius: 6px;
-  border: solid 1px #E4E4E4;
-  width: 245px;
-  height: 38px;
-  padding-left: 10px;
-}
-
-.firstname-input:focus {
-  border-color: solid 1px #39c;
-}
-
-/* Email */
-.email input {
-  margin-top: 7px;
-  width: 500px;
-}
-
-.email {
-  margin-top: 20px;
-  margin-right: 12px;
-  color: #545454;
-  font-size: 15px;
-}
-
-.email p {
-  font-size: 13px;
-  color: #969696;
-  margin-top: 7px;
-}
-
-/* Radio button */
-.mfale {
-  margin-top: 20px;
-}
-
-.mfale label {
-  margin-right: 21px;
-}
-
-/* для элемента input c type="radio" */
-.custom-radio {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-/* для элемента label связанного с .custom-radio */
-.custom-radio+label {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* создание в label псевдоэлемента  before со следующими стилями */
-.custom-radio+label::before {
-  content: "";
+.card {
   display: inline-block;
-  width: 1em;
-  height: 1em;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  border: 1px solid #adb5bd;
-  border-radius: 50%;
-  margin-right: 0.5em;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-/* стили при наведении курсора на радио */
-.custom-radio:not(:disabled):not(:checked)+label:hover::before {
-  border-color: #b3d7ff;
-}
-
-/* стили для активной радиокнопки (при нажатии на неё) */
-.custom-radio:not(:disabled):active+label::before {
-  background-color: #b3d7ff;
-  border-color: #b3d7ff;
-}
-
-/* стили для радиокнопки, находящейся в фокусе */
-.custom-radio:focus+label::before {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
-.custom-radio:focus:not(:checked)+label::before {
-  border-color: #80bdff;
-}
-
-/* стили для радиокнопки, находящейся в состоянии checked */
-.custom-radio:checked+label::before {
-  background-image: url("/images/radio.svg");
-}
-
-/* стили для радиокнопки, находящейся в состоянии disabled */
-.custom-radio:disabled+label::before {
-  background-color: #e9ecef;
-}
-
-/* Countries */
-.country-city {
-  margin-top: 20px;
-  display: flex;
-  color: #545454;
-}
-
-select {
-  color: #545454;
-}
-
-.select {
-  appearance: none;
-  overflow: hidden;
-  background: url('../images/🔹\ Icon\ Color.png') no-repeat;
-  background-size: 11px 14px;
-  background-position: 95%;
-}
-
-/* Button */
-
-.btn {
-  display: block;
-  width: 100%;
-  height: 38px;
-  background-color: #007BFF;
-  margin-top: 20px;
-  border: #007BFF;
-  border-radius: 6px;
-  color: white;
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
-/* Text */
-
-.text {
-  color: #969696;
-  margin-top: 22px;
-  text-align: center;
-  max-width: 420px;
-  margin-left: 43px;
-  line-height: 18px;
-  border-bottom: 1px solid #E4E4E4;
-  padding-bottom: 20px;
-}
-
-.color-a {
-  color: #007BFF;
-}
-
-/* Have an account? */
-
-.have-ac {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.have-ac p {
-  margin-right: 20px;
-}
-
-/* Button 2 */
-
-.btn-2 {
-  display: block;
   width: 150px;
-  height: 38px;
-  background-color: #007BFF;
-  margin-top: 20px;
-  border: #007BFF;
-  border-radius: 6px;
-  color: white;
-  margin-bottom: 96px;
-}
-.btn-2:hover{
-  opacity: 0.8;
+  height: 200px;
+  perspective: 1000px;
+  margin: 5px;
+  animation: flip 2s infinite;
+  animation-delay: calc(var(--delay) * 1s);
+  transform-style: preserve-3d;
 }
 
-/* Image */
-
-.image {
-  display: flex;
-  margin-bottom: 20px;
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  backface-visibility: hidden;
+  border: 1px solid black;
+  border-radius: 7px;
+  text-align: center;
 }
 
-input[type=file] {
-  display: none;
+.front img {
+  width: 150px;
+  height: 200px;
+  ;
+  border-radius: 7px;
 }
 
-.photo-1 {
-  margin-top: 9px;
-  margin-bottom: 9px;
-  margin-right: 9px;
-  width: 14px;
-  height: 13px;
+.back {
+  transform: rotateY(180deg);
 }
 
-.photo {
-  margin-top: 11px;
-  width: 138px;
-  height: 30px;
-  border: 1px solid #E4E4E4;
-  border-radius: 6px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  position: relative;
-  margin-left: 20px;
+.card:hover .front {
+  transform: rotateY(180deg);
 }
 
-.photo:hover {
-  border: 1px solid #007BFF;
+.card:hover .back {
+  transform: rotateY(360deg);
 }
 
-.trashbutton {
-  width: 30px;
-  height: 30px;
-  margin-top: 11px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #FFFFFF;
-  border: 1px solid #E4E4E4;
-  border-radius: 6px;
-  display: inline-flex;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-  margin-left: 10px;
+.suit {
+  position: absolute;
+  font-size: 29px;
+  left: 10px;
+  line-height: 24px;
 }
 
-.trashbutton:hover {
-  border: 1px solid #007BFF;
+.center {
+  position: absolute;
+  font-size: 100px;
+  top: 41px;
+  right: 45px;
+  ;
 }
-.image p {
-  color: #969696;
-  font-size: 13px;
-  position: relative;
-  right: 178px;
-  bottom: -50px;
+
+.value {
+  position: absolute;
+  font-size: 29px;
+  bottom: 5px;
+  right: 9px;
+  line-height: 24px;
+  transform: rotate(180deg);
+}
+
+.spades {
+  color: black;
+}
+
+.hearts {
+  color: red;
+}
+
+.card.flipped {
+  animation-name: unflip;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes unflip {
+  0% {
+    transform: rotateY(180deg);
+  }
+
+  50% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360sdeg);
+  }
 }
