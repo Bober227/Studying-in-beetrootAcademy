@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/beetroot-academi-/static/css/main.86391ed2.css",
+    "main.js": "/beetroot-academi-/static/js/main.21a8aa19.js",
+    "static/js/787.28cb0dcd.chunk.js": "/beetroot-academi-/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/beetroot-academi-/index.html",
+    "main.86391ed2.css.map": "/beetroot-academi-/static/css/main.86391ed2.css.map",
+    "main.21a8aa19.js.map": "/beetroot-academi-/static/js/main.21a8aa19.js.map",
+    "787.28cb0dcd.chunk.js.map": "/beetroot-academi-/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86391ed2.css",
+    "static/js/main.21a8aa19.js"
+  ]
+}
