@@ -1,0 +1,37 @@
+.footer {
+  border-top: 1px solid #333;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer-text {
+
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #bbb;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 14px;
+
+  &:hover {
+    color: firebrick;
+    text-decoration: underline;
+  }
+}
+
+.links nav {
+  display: flex;
+}
+
+@media screen and (max-width: 332px) {
+  .links nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
